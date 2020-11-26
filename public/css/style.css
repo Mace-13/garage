@@ -1,0 +1,12 @@
+.wall{
+    height: 700px;
+    background-image: url("../images/wallHyundai2.jpg");
+    background-size: cover;
+    background-position: center;
+
+}
+
+.pres{
+    height: 300px;
+
+}
