@@ -14,15 +14,18 @@ class CarFixtures extends Fixture
     public function load(ObjectManager $manager)
     {
         $faker = Factory::create('FR-fr');
-        $slugify = new Slugify();
+
 
         for($c=0; $c<=9; $c++){
+
             $car = new Car();
+            $slugify = new Slugify();
+
             $marque = $faker->lexify('Car ???');
             $modele = $faker->lexify('?????');
-            $slug = $slugify->slugify($marque);
+            $slug = $slugify->slugify($marque.'-'.$modele.'-'.rand(1,100));
             $description = $faker->paragraph(2);
-            $carOption = '<p>'.join('</p><p>',$faker->paragraphs(5)).'</p>';
+            $carOption = '<p>'.join('</p><p>',$faker->sentences(5)).'</p>';
             $date = $faker->dateTime($max = 'now', $timezone = null);
             $carburant = ['essence','diesel','hybride','electrique'];
             $transmission = ['manuelle','automatique'];
