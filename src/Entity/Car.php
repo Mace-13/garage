@@ -3,12 +3,20 @@
 namespace App\Entity;
 
 use App\Repository\CarRepository;
+use Cocur\Slugify\Slugify;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass=CarRepository::class)
+ * @ORM\HasLifecycleCallbacks
+ * @UniqueEntity(
+ *  fields={"title"},
+ *  message="Une autre annonce possède déjà ce titre, merci de le modifier"
+ * )
  */
 class Car
 {
@@ -91,12 +99,28 @@ class Car
 
     /**
      * @ORM\OneToMany(targetEntity=Image::class, mappedBy="car", orphanRemoval=true)
+     * @Assert\Valid()
      */
     private $images;
 
     public function __construct()
     {
         $this->images = new ArrayCollection();
+    }
+
+    /** crée un slug automatiquement
+     * @ORM\PrePersist
+     * @ORM\PreUpdate
+     *
+     * @return void
+     */
+    public function initializeSlug()
+    {
+        if(empty($this->slug))
+        {
+            $slugify = new Slugify();
+            $this->slug = $slugify->slugify($this->marque.'-'. $this->modele.'-'.rand(1,100000));
+        }
     }
 
     public function getId(): ?int
