@@ -3,28 +3,34 @@
 {% block title %}Showroom{% endblock %}
 
 {% block body %}
+<div class="container">
+    <h3 class="mt-4 mb-3">Notre showroom : </h3>
+    <div class="box row justify-content-center">
+        {% for car in cars %}
+            {% set url = path('show', {'slug': car.slug}) %}
 
-    {% for car in cars %}
-        {% set url = path('show', {'slug': car.slug}) %}
-    <div class="col-md-4">
-        <div class="card bg-light mb-3">
-            <div class="card-header text-center">
-                {{ car.marque }}  <strong>{{car.prix}} €</strong>
-            </div>
-            <a href="{{url}}">
-                <img src="{{ car.coverImage }}" alt="image de {{ car.modele }}" class="carsimg">
-            </a>
-            <div class="card-body">
-                <h4 class="card-title">
-                    {{ car.modele }}
-                </h4>
-                <p class="card-text">
-                    {{ car.description }}
-                </p>
-                <a href="{{url}}" class="btn btn-secondary">En savoir plus</a>
-            </div>
+            <div class="col-md-4">
+                <div class="card bg-light mb-3" style="min-height:400px;">
+                    <div class="card-header text-center">
+                        {{ car.marque }} <p>à partir de :</p> <strong>{{car.prix}} €</strong>
+                    </div>
+                    <a href="{{url}}">
+                        <img src="{{ car.coverImage }}" alt="image de {{ car.modele }}" class="carsimg">
+                    </a>
+                    <div class="card-body d-flex-column">
+                        <h4 class="card-title">
+                            {{ car.modele }}
+                        </h4>
+                        <p class="card-text text-truncate">
+                            {{ car.description }}
+                        </p>
+                        <a href="{{url}}" class="btn btn-secondary justify-content-end">En savoir plus</a>
+                    </div>
 
-        </div>
+                </div>
+            </div>
+        {% endfor %}
     </div>
-    {% endfor %}
+
+    </div>
 {% endblock %}

@@ -14,7 +14,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  * @ORM\Entity(repositoryClass=CarRepository::class)
  * @ORM\HasLifecycleCallbacks
  * @UniqueEntity(
- *  fields={"title"},
+ *  fields={"marque"},
  *  message="Une autre annonce possède déjà ce titre, merci de le modifier"
  * )
  */

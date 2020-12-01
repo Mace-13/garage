@@ -3,17 +3,17 @@
 {% block title %}Voiture : {{ car.marque }}{% endblock %}
 
 {% block body %}
-    <div class="annonce-title" style="background-image: url({{car.coverImage}});">
+
+    <div class="annonce-title text-danger" style="background-image: url({{car.coverImage}});background-repeat:no-repeat;background-size:cover;">
         <div class="container">
             <h1>{{car.marque}}</h1>
             <p>{{car.description}}</p>
-            <p class="h2"><strong>{{car.modele}}</strong> pour <strong>{{car.prix}}</strong>€ </p>
-            <a href="#" class="btn btn-primary">Réserver</a>
+            <p class="h2 mb-3"><strong>{{car.modele}}</strong> à partir de <strong>{{car.prix}}</strong>€ </p>
         </div>
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-8 mb-3">
+            <div class="col-md-8 mt-3 mb-3 ">
                 {{car.carOption | raw | nl2br }}
                 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">

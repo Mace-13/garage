@@ -15,6 +15,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class CarController extends AbstractController
 {
     /**
+     * affiche la page du showroom
      * @param CarRepository $repo
      * @Route("/showroom/", name="showroom")
      * @return Response
@@ -28,6 +29,7 @@ class CarController extends AbstractController
     }
 
     /**
+     * ajouter une nouvelle voiture
      * @Route("/showroom/new", name="new")
      * @param CarType $car
      * @return Response
@@ -52,7 +54,7 @@ class CarController extends AbstractController
 
             $this->addFlash(
                 'success',
-                "la voiture <strong>{$car->getMarque()}</strong> a bien été enregistrée"
+                "la voiture <strong>{$car->getSlug()}</strong> a bien été enregistrée"
             );
 
             return $this->redirectToRoute('show',[

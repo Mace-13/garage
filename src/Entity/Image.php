@@ -20,13 +20,11 @@ class Image
 
     /**
      * @ORM\ManyToOne(targetEntity=Car::class, inversedBy="images")
-     * @ORM\JoinColumn(nullable=false)
      */
     private $car;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\Url(message="Cette url n'est pas valide")
      */
     private $url;
 
