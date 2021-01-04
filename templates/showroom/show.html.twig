@@ -14,7 +14,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 mt-3 mb-3 ">
-                {{car.carOption | raw | nl2br }}
+                <p>Nombre de km: {{ car.km }} km</p>
+                <p>Cylindrée: {{ car.cylindre }}</p>
+                <p>Puissance: {{ car.puissance }}</p>
+                <p>Carburant: {{ car.carburant }}</p>
+                <p>Date de mise en circulation: {{ car.miseCirculation |date('d-m-Y') }}</p>
+                <p>Transmission: {{ car.transmission }}</p>
+                <p>Options:{{car.carOption | raw | nl2br }} </p>
                 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         {% for image in car.images %}
