@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0b4ec75d-2e79-4ce9-9b65-82c5419b2456" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Car.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Car.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +150,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/OneDrive/Bureau/portfolio-2" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -181,6 +182,9 @@
       <workItem from="1606823411430" duration="3504000" />
       <workItem from="1606844588084" duration="2395000" />
       <workItem from="1606902863102" duration="17000" />
+      <workItem from="1609766520035" duration="1401000" />
+      <workItem from="1609769505877" duration="8000" />
+      <workItem from="1609791624205" duration="1441000" />
     </task>
     <servers />
   </component>
@@ -198,23 +202,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="718" y="123" key="#com.intellij.ide.util.MemberChooser" timestamp="1606672789357">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="718" y="123" key="#com.intellij.ide.util.MemberChooser/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606672789357" />
-    <state x="624" y="216" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606596982715">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="624" y="216" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606596982715" />
-    <state x="687" y="216" key="FileChooserDialogImpl" timestamp="1606844601930">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="687" y="216" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606844601930" />
-    <state x="351" y="78" key="SettingsEditor" timestamp="1606844648730">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="351" y="78" key="SettingsEditor/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606844648730" />
   </component>
 </project>

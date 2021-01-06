@@ -29,11 +29,13 @@ class Car
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(min=2, max=50, minMessage="La marque doit faire plus de 2 caractères", maxMessage="La marque ne peut pas faire plus de 50 caractères")
      */
     private $marque;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(min=2, max=50, minMessage="Le modele doit faire plus de 2 caractères", maxMessage="Le modele ne peut pas faire plus de 50 caractères")
      */
     private $modele;
 
@@ -49,6 +51,7 @@ class Car
 
     /**
      * @ORM\Column(type="float")
+     *
      */
     private $prix;
 
@@ -69,6 +72,7 @@ class Car
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(min=5, max=50, minMessage="Le carburant doit faire plus de 5 caractères", maxMessage="Le carburant ne peut pas faire plus de 50 caractères")
      */
     private $carburant;
 
@@ -79,16 +83,19 @@ class Car
 
     /**
      * @ORM\Column(type="string", length=255)
+     * (min=5, max=50, minMessage="La transmission doit faire plus de 5 caractères", maxMessage="La transmission ne peut pas faire plus de 50 caractères")
      */
     private $transmission;
 
     /**
      * @ORM\Column(type="text")
+     * @Assert\Length(min=20, minMessage="Votre description doit faire plus de 20 caractères")
      */
     private $description;
 
     /**
      * @ORM\Column(type="text")
+     * @Assert\Length(min=20, minMessage="carOption doit faire plus de 20 caractères")
      */
     private $carOption;
 
